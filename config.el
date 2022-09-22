@@ -125,47 +125,47 @@ Spacemacs use spacemacs-.*-mode-map, we here use original mode map."
 ;; initialise layers
 
 ;; org layer
-(when (featurep! :lang org)
-  (load! (concat spacemacs-module-path "layer/org/config.el"))
-  (load! (concat spacemacs-module-path "layer/org/funcs.el"))
-  (load! (concat spacemacs-module-path "layer/org/packages.el"))
-  (org/init-org)
-  ;; (org/post-init-org)
-  (org/init-org-agenda)
-  (org/init-org-brain)
-  (org/init-org-expiry)
-  (org/init-org-download)
-  (org/init-org-jira)
-  (org/init-org-mime)
-  (org/init-org-pomodoro)
-  (org/init-org-present)
-  (org/init-org-cliplink)
-  ;; (org/init-org-projectile)
-  ;; (org/pre-init-org-re-reveal)
-  ;; (org/init-org-re-reveal )
-  (org/init-org-journal)
-  ;; (org/init-org-trello)
-  ;; (org/init-org-sticky-header)
-  (setq org-want-todo-bindings t)
-  (org/init-evil-org))
+;; (when (featurep! :lang org)
+;;   (load! (concat spacemacs-module-path "layer/org/config.el"))
+;;   (load! (concat spacemacs-module-path "layer/org/funcs.el"))
+;;   (load! (concat spacemacs-module-path "layer/org/packages.el"))
+;;   (org/init-org)
+;;   ;; (org/post-init-org)
+;;   (org/init-org-agenda)
+;;   (org/init-org-brain)
+;;   (org/init-org-expiry)
+;;   (org/init-org-download)
+;;   (org/init-org-jira)
+;;   (org/init-org-mime)
+;;   (org/init-org-pomodoro)
+;;   (org/init-org-present)
+;;   (org/init-org-cliplink)
+;;   ;; (org/init-org-projectile)
+;;   ;; (org/pre-init-org-re-reveal)
+;;   ;; (org/init-org-re-reveal )
+;;   (org/init-org-journal)
+;;   ;; (org/init-org-trello)
+;;   ;; (org/init-org-sticky-header)
+;;   (setq org-want-todo-bindings t)
+;;   (org/init-evil-org))
 
 
-;; pdf layer
-(load! (concat spacemacs-module-path "layer/pdf/packages.el"))
-(pdf/init-pdf-tools)
+;; ;; pdf layer
+;; (load! (concat spacemacs-module-path "layer/pdf/packages.el"))
+;; (pdf/init-pdf-tools)
 
-;; epub layer
-(load! (concat spacemacs-module-path "layer/epub/packages.el"))
-(epub/init-nov)
+;; ;; epub layer
+;; (load! (concat spacemacs-module-path "layer/epub/packages.el"))
+;; (epub/init-nov)
 
-;; dash layer
-(when (featurep! :tools lookup +docsets)
-  (load! (concat spacemacs-module-path "layer/dash/packages.el"))
-  ;; (load! (concat spacemacs-module-path "layer/dash/config.el"))
-  ;; (load! (concat spacemacs-module-path "layer/dash/funcs.el"))
-  (dash/init-dash-at-point)
-  ;;(dash/init-counsel-dash)
-  )
+;; ;; dash layer
+;; (when (featurep! :tools lookup +docsets)
+;;   (load! (concat spacemacs-module-path "layer/dash/packages.el"))
+;;   ;; (load! (concat spacemacs-module-path "layer/dash/config.el"))
+;;   ;; (load! (concat spacemacs-module-path "layer/dash/funcs.el"))
+;;   (dash/init-dash-at-point)
+;;   ;;(dash/init-counsel-dash)
+;;   )
 
 
 
@@ -230,21 +230,21 @@ Spacemacs use spacemacs-.*-mode-map, we here use original mode map."
 ;; (version-control/init-browse-at-remote)
 
 
-;; github layer
-(load! (concat spacemacs-module-path "layer/github/funcs.el"))
-(load! (concat spacemacs-module-path "layer/github/packages.el"))
-(when (featurep! :tools magit)
-  (github/init-forge))
-(github/init-gist)
-(github/init-github-clone)
-(github/init-github-search)
-;; github/init-spacemacs-github ()
+;; ;; github layer
+;; (load! (concat spacemacs-module-path "layer/github/funcs.el"))
+;; (load! (concat spacemacs-module-path "layer/github/packages.el"))
+;; (when (featurep! :tools magit)
+;;   (github/init-forge))
+;; (github/init-gist)
+;; (github/init-github-clone)
+;; (github/init-github-search)
+;; ;; github/init-spacemacs-github ()
 
 
 ;; spacemacs navigation layer
 (load! (concat spacemacs-module-path "layer/spacemacs-navigation/funcs.el"))
 (load! (concat spacemacs-module-path "layer/spacemacs-navigation/packages.el"))
-(spacemacs-navigation/init-auto-highlight-symbol)
+;(spacemacs-navigation/init-auto-highlight-symbol)
 (spacemacs-navigation/init-symbol-overlay)
 
 
@@ -252,7 +252,7 @@ Spacemacs use spacemacs-.*-mode-map, we here use original mode map."
 (load! (concat spacemacs-module-path "layer/spacemacs-layouts/packages.el"))
 (load! (concat spacemacs-module-path "layer/spacemacs-layouts/funcs.el"))
 (load! (concat spacemacs-module-path "layer/spacemacs-layouts/config.el"))
-(spacemacs-layouts/init-eyebrowse)
+; (spacemacs-layouts/init-eyebrowse)
 (when (featurep! :ui workspaces)
   (spacemacs-layouts/init-persp-mode))
 
@@ -307,11 +307,11 @@ Spacemacs use spacemacs-.*-mode-map, we here use original mode map."
   ;; (spacemacs-evil/init-evil-indent-plus)
   (spacemacs-evil/init-evil-lion)
   ;;(spacemacs-evil/init-evil-lisp-state)
-  (spacemacs-evil/init-evil-nerd-commenter)
+  ;; (spacemacs-evil/init-evil-nerd-commenter)
   ;; (spacemacs-evil/init-evil-matchit)
-  (spacemacs-evil/init-evil-numbers)
+  ;; (spacemacs-evil/init-evil-numbers)
   ;; (spacemacs-evil/init-evil-surround)
-  (spacemacs-evil/init-evil-terminal-cursor-changer)
+  ;; (spacemacs-evil/init-evil-terminal-cursor-changer)
   ;; (spacemacs-evil/init-evil-textobj-line)
   ;; (spacemacs-evil/init-evil-tutor)
   ;; (spacemacs-evil/init-evil-unimpaired)
@@ -324,52 +324,52 @@ Spacemacs use spacemacs-.*-mode-map, we here use original mode map."
   )
 
 ;; shell layer
-(load! (concat spacemacs-module-path "layer/shell/config.el"))
-(load! (concat spacemacs-module-path "layer/shell/funcs.el"))
-(load! (concat spacemacs-module-path "layer/shell/packages.el"))
-(if (featurep! :term eshell)
-    (shell/init-eshell))
-(if (featurep! :term vterm)
-    (shell/init-vterm))
+;; (load! (concat spacemacs-module-path "layer/shell/config.el"))
+;; (load! (concat spacemacs-module-path "layer/shell/funcs.el"))
+;; (load! (concat spacemacs-module-path "layer/shell/packages.el"))
+;; (if (featurep! :term eshell)
+;;     (shell/init-eshell))
+;; (if (featurep! :term vterm)
+;;     (shell/init-vterm))
 
 ;; json layer
-(load! (concat spacemacs-module-path "layer/json/config.el"))
-(load! (concat spacemacs-module-path "layer/json/funcs.el"))
-(load! (concat spacemacs-module-path "layer/json/packages.el"))
-(json/init-json-navigator)
-(json/init-json-reformat)
-(json/init-json-snatcher)
+;; (load! (concat spacemacs-module-path "layer/json/config.el"))
+;; (load! (concat spacemacs-module-path "layer/json/funcs.el"))
+;; (load! (concat spacemacs-module-path "layer/json/packages.el"))
+;; (json/init-json-navigator)
+;; (json/init-json-reformat)
+;; (json/init-json-snatcher)
 
 (defalias 'iedit-lib-cleanup 'iedit-cleanup)
 
 ;; ivy layer
 ;; if default +bindings is enabled in init.el, it will not run
-(when (featurep! :completion ivy)
-  (unless (featurep! :config default +bindings)
-    (load! (concat spacemacs-module-path "layer/ivy/packages.el"))
-    (load! (concat spacemacs-module-path "layer/ivy/config.el"))
-    (load! (concat spacemacs-module-path "layer/ivy/funcs.el"))
-    (load! (concat spacemacs-module-path "layer/spacemacs-project/packages.el"))
-    (load! (concat spacemacs-module-path "layer/spacemacs-project/funcs.el"))
-    (load! (concat spacemacs-module-path "layer/spacemacs-completion/funcs.el"))
-    (map! :leader
-          "sg" nil
-          "sk" nil
-          "sr" nil
-          "st" nil)
-    (ivy/post-init-bookmark)
-    (ivy/init-counsel)
-    (ivy/pre-init-counsel-projectile)
-    (ivy/post-init-evil)
-    (if (featurep 'helm-make)
-        (ivy/init-helm-make))
-    (ivy/post-init-imenu)
-    (ivy/init-ivy)
-    (ivy/post-init-projectile)
-    (ivy/init-swiper)
-    (ivy/init-wgrep)
-    (spacemacs-project/init-projectile)
-    (spacemacs//ivy-hjkl-navigation dotspacemacs-editing-style)))
+;; (when (featurep! :completion ivy)
+;;   (unless (featurep! :config default +bindings)
+;;     (load! (concat spacemacs-module-path "layer/ivy/packages.el"))
+;;     (load! (concat spacemacs-module-path "layer/ivy/config.el"))
+;;     (load! (concat spacemacs-module-path "layer/ivy/funcs.el"))
+;;     (load! (concat spacemacs-module-path "layer/spacemacs-project/packages.el"))
+;;     (load! (concat spacemacs-module-path "layer/spacemacs-project/funcs.el"))
+;;     (load! (concat spacemacs-module-path "layer/spacemacs-completion/funcs.el"))
+;;     (map! :leader
+;;           "sg" nil
+;;           "sk" nil
+;;           "sr" nil
+;;           "st" nil)
+;;     (ivy/post-init-bookmark)
+;;     (ivy/init-counsel)
+;;     (ivy/pre-init-counsel-projectile)
+;;     (ivy/post-init-evil)
+;;     (if (featurep 'helm-make)
+;;         (ivy/init-helm-make))
+;;     (ivy/post-init-imenu)
+;;     (ivy/init-ivy)
+;;     (ivy/post-init-projectile)
+;;     (ivy/init-swiper)
+;;     (ivy/init-wgrep)
+;;     (spacemacs-project/init-projectile)
+;;     (spacemacs//ivy-hjkl-navigation dotspacemacs-editing-style)))
 
 (when (featurep! :completion vertico)
   (load! (concat spacemacs-module-path "layer/compleseus/packages.el"))
@@ -386,13 +386,13 @@ Spacemacs use spacemacs-.*-mode-map, we here use original mode map."
   (compleseus/init-consult-yasnippet )()
   (compleseus/init-embark)
   (compleseus/init-embark-consult)
-  (compleseus/init-orderless)
+  (after! (lsp-completion-mode) (compleseus/init-orderless))
   ;; (compleseus/init-selectrum)
   (compleseus/init-vertico)
   (compleseus/init-vertico-quick)
   (compleseus/init-vertico-repeat)
   (compleseus/init-vertico-directory)
-  (spacemacs/compleseus-wgrep-change-to-wgrep-mode)
+  ; (spacemacs/compleseus-wgrep-change-to-wgrep-mode) ; this prints an odd message on startup about exiting a buffer when done
   (compleseus/post-init-grep)
   (compleseus/init-wgrep)
   ;; (compleseus/init-compleseus-spacemacs-help)

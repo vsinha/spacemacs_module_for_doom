@@ -276,7 +276,6 @@
 
 (defun compleseus/init-embark-consult ()
   (use-package embark-consult
-    :ensure t
     :after (embark consult)
     :demand t ; only necessary if you have the hook below
     ;; if you want to have consult previews as you move around an
@@ -286,12 +285,14 @@
 
 (defun compleseus/init-orderless ()
   (use-package orderless
+    :defer t
     :init
     ;; https://github.com/oantolin/orderless/issues/48#issuecomment-856750410
     ;; too intrusive and disrupts lsp
     (define-advice company-capf (:around (orig-fun &rest args) set-completion-styles)
       ;; when lsp is on stay away
-      (if lsp-completion-mode
+      (if (lsp-completion-mode)
+      ;; (if (and (fboundp 'lsp-completion-mode) (lsp-completion-mode))
           (apply orig-fun args)
         (let ((completion-styles '(basic partial-completion orderless)))
           (apply orig-fun args))))

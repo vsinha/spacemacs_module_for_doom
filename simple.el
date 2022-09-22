@@ -125,10 +125,10 @@ Spacemacs use spacemacs-.*-mode-map, we here use original mode map."
 
 ;; org layer
 
-(load! (concat spacemacs-module-path "layer/org/config.el"))
-(load! (concat spacemacs-module-path "layer/org/funcs.el"))
-(load! (concat spacemacs-module-path "layer/org/packages.el"))
-(org/init-org)
+;; (load! (concat spacemacs-module-path "layer/org/config.el"))
+;; (load! (concat spacemacs-module-path "layer/org/funcs.el"))
+;; (load! (concat spacemacs-module-path "layer/org/packages.el"))
+;; (org/init-org)
 ;; (org/post-init-org)
 ;; (org/init-org-agenda)
 ;; (org/init-org-brain)
@@ -145,8 +145,8 @@ Spacemacs use spacemacs-.*-mode-map, we here use original mode map."
 ;; (org/init-org-journal)
 ;; (org/init-org-trello)
 ;; (org/init-org-sticky-header)
-(setq org-want-todo-bindings t)
-(org/init-evil-org)
+;; (setq org-want-todo-bindings t)
+;; (org/init-evil-org)
 
 
 ;; pdf layer
@@ -297,7 +297,7 @@ Spacemacs use spacemacs-.*-mode-map, we here use original mode map."
 ;; (spacemacs-evil/init-evil-ediff)
 ;; (spacemacs-evil/init-evil-escape)
 ;; (spacemacs-evil/init-evil-exchange)
-;; (spacemacs-evil/init-evil-goggles)
+(spacemacs-evil/init-evil-goggles)
 (spacemacs-evil/init-evil-iedit-state)
 ;; (spacemacs-evil/init-evil-indent-plus)
 (spacemacs-evil/init-evil-lion)
@@ -318,11 +318,11 @@ Spacemacs use spacemacs-.*-mode-map, we here use original mode map."
 
 
 ;; shell layer
-(load! (concat spacemacs-module-path "layer/shell/config.el"))
-(load! (concat spacemacs-module-path "layer/shell/funcs.el"))
-(load! (concat spacemacs-module-path "layer/shell/packages.el"))
-(shell/init-eshell)
-(shell/init-vterm)
+;; (load! (concat spacemacs-module-path "layer/shell/config.el"))
+;; (load! (concat spacemacs-module-path "layer/shell/funcs.el"))
+;; (load! (concat spacemacs-module-path "layer/shell/packages.el"))
+;; (shell/init-eshell)
+;; (shell/init-vterm)
 
 ;; json layer
 (load! (concat spacemacs-module-path "layer/json/config.el"))
